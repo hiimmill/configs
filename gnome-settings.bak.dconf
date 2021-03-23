@@ -318,6 +318,7 @@ magnifier-zoom-out=@as []
 mic-mute=['<Super>c']
 screencast=@as []
 screenreader=@as []
+screensaver=['<Primary><Alt>Delete']
 screenshot-clip=@as []
 window-screenshot-clip=@as []
 
@@ -456,5 +457,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(13, 11)
+window-position=(0, 141)
 window-size=(1328, 902)
