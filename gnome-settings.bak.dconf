@@ -2,17 +2,26 @@
 display-mode='list'
 
 [io/github/celluloid-player/celluloid]
+always-open-new-window=true
+csd-enable=false
 settings-migrated=true
 
 [io/github/celluloid-player/celluloid/window-state]
-height=533
+height=1038
 loop-playlist=false
 maximized=false
 playlist-width=250
-show-controls=true
+show-controls=false
 show-playlist=false
-volume=1.0
-width=470
+volume=0.80000000000000004
+width=1904
+
+[org/gnome/Geary]
+folder-list-pane-position-horizontal=100
+messages-pane-position=351
+migrated-config=true
+window-height=473
+window-width=948
 
 [org/gnome/Totem]
 active-plugins=['vimeo', 'skipto', 'screenshot', 'apple-trailers', 'media-player-keys', 'open-directory', 'save-file', 'recent', 'movie-properties', 'screensaver', 'variable-rate', 'rotation', 'autoload-subtitles']
@@ -33,13 +42,21 @@ target-units='radian'
 window-position=(23, 15)
 word-size=64
 
+[org/gnome/cheese]
+burst-delay=1000
+camera='HP HD Webcam  HP HD Webcam'
+photo-x-resolution=640
+photo-y-resolution=480
+video-x-resolution=640
+video-y-resolution=480
+
 [org/gnome/clocks]
-alarms=@aa{sv} []
-timers=[{'duration': <1500>, 'name': <'kali pom1'>}, {'duration': <420>, 'name': <''>}]
+alarms=[{'name': <'ogarnij łazienki'>, 'id': <'06d6b69c5db9afa843cd881b605cbd50'>, 'active': <true>, 'hour': <20>, 'minute': <59>, 'days': <@ai []>, 'snooze_minutes': <10>, 'ring_minutes': <5>}, {'name': <'zacznij ogar: zmywanie, ręczniki i papier'>, 'id': <'aa205c623cf4457234e2c001605cbd87'>, 'active': <true>, 'hour': <21>, 'minute': <30>, 'days': <@ai []>, 'snooze_minutes': <10>, 'ring_minutes': <5>}]
+timers=@aa{sv} []
 
 [org/gnome/clocks/state/window]
-panel-id='timer'
-size=(948, 1039)
+panel-id='alarm'
+size=(1904, 1038)
 state=87168
 
 [org/gnome/control-center]
@@ -74,6 +91,9 @@ excluded-apps=['org.manjaro.pamac.manager.desktop']
 name='System Tools'
 translate=true
 
+[org/gnome/desktop/applications/terminal]
+exec='kitty'
+
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
@@ -101,7 +121,7 @@ monospace-font-name='Ubuntu Mono 12'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'gnome-power-panel', 'org-qbittorrent-qbittorrent', 'com-microsoft-teams', 'signal-desktop', 'discord', 'brave-browser', 'gnome-printers-panel', 'org-gnome-nautilus', 'org-gnome-fileroller', 'com-obsproject-studio', 'com-skype-client', 'org-keepassxc-keepassxc', 'org-gnome-clocks', 'org-gnome-dejadup', 'com-github-ismaelmartinez-teams-for-linux']
+application-children=['org-manjaro-pamac-manager', 'gnome-power-panel', 'org-qbittorrent-qbittorrent', 'com-microsoft-teams', 'signal-desktop', 'discord', 'brave-browser', 'gnome-printers-panel', 'org-gnome-nautilus', 'org-gnome-fileroller', 'com-obsproject-studio', 'com-skype-client', 'org-keepassxc-keepassxc', 'org-gnome-clocks', 'org-gnome-dejadup', 'com-github-ismaelmartinez-teams-for-linux', 'teams', 'kitty']
 
 [org/gnome/desktop/notifications/application/brave-browser]
 application-id='brave-browser.desktop'
@@ -127,6 +147,9 @@ application-id='gnome-power-panel.desktop'
 [org/gnome/desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
 
+[org/gnome/desktop/notifications/application/kitty]
+application-id='kitty.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-clocks]
 application-id='org.gnome.clocks.desktop'
 
@@ -151,19 +174,28 @@ application-id='org.qbittorrent.qBittorrent.desktop'
 [org/gnome/desktop/notifications/application/signal-desktop]
 application-id='signal-desktop.desktop'
 
+[org/gnome/desktop/notifications/application/teams]
+application-id='teams.desktop'
+
 [org/gnome/desktop/peripherals/touchpad]
 click-method='none'
 
 [org/gnome/desktop/privacy]
 disable-microphone=false
+remove-old-temp-files=true
+remove-old-trash-files=true
 report-technical-problems=true
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
+lock-delay=uint32 0
 picture-options='zoom'
 picture-uri='file:///home/hiimmill/.local/share/backgrounds/2021-03-02-17-34-44-dracula.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
+
+[org/gnome/desktop/session]
+idle-delay=uint32 300
 
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=['<Super>space']
@@ -203,7 +235,7 @@ theme='Dracula'
 titlebar-font='Ubuntu 13'
 
 [org/gnome/evince/default]
-window-ratio=(0.97937105227791954, 0.75306750288042379)
+window-ratio=(1.5924638509277333, 1.1830527497194157)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -239,6 +271,28 @@ sidebar-width=200
 window-height=480
 window-width=600
 
+[org/gnome/gedit/plugins]
+active-plugins=['modelines', 'docinfo', 'spell', 'sort', 'filebrowser']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/hiimmill/github/wiki'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(948, 1116)
+state=87168
+
+[org/gnome/gnome-screenshot]
+include-pointer=false
+last-save-directory='file:///home/hiimmill/Pictures'
+
 [org/gnome/gthumb/browser]
 browser-sidebar-width=365
 fullscreen-sidebar='hidden'
@@ -249,19 +303,19 @@ sidebar-sections=['GthFileProperties:expanded', 'GthFileComment:expanded', 'GthF
 sidebar-visible=true
 sort-inverse=false
 sort-type='file::mtime'
-startup-current-file='file:///home/hiimmill/Pictures/dracula-alt.jpg'
+startup-current-file='file:///home/hiimmill/Pictures/hiimmill-profile-pic-trimmed.jpg'
 startup-location='file:///home/hiimmill/Pictures'
 statusbar-visible=true
 thumbnail-list-visible=true
 viewer-sidebar='tools'
-window-height=810
-window-width=1363
+window-height=996
+window-width=1904
 
 [org/gnome/gthumb/crop]
-aspect-ratio='none'
-aspect-ratio-height=1
-aspect-ratio-invert=false
-aspect-ratio-width=1
+aspect-ratio='4x3'
+aspect-ratio-height=3
+aspect-ratio-invert=true
+aspect-ratio-width=4
 bind-dimensions=false
 bind-factor=8
 grid-type='thirds'
@@ -269,8 +323,18 @@ grid-type='thirds'
 [org/gnome/gthumb/data-migration]
 catalogs-2-10=true
 
+[org/gnome/gthumb/dialogs/save-file]
+show-options=true
+
 [org/gnome/gthumb/general]
 active-extensions=['23hq', 'bookmarks', 'burn_disc', 'catalogs', 'change_date', 'comments', 'contact_sheet', 'convert_format', 'desktop_background', 'edit_metadata', 'exiv2_tools', 'facebook', 'file_manager', 'find_duplicates', 'flicker', 'gstreamer_tools', 'gstreamer_utils', 'image_print', 'image_rotation', 'importer', 'jpeg_utils', 'list_tools', 'oauth', 'photo_importer', 'picasaweb', 'raw_files', 'red_eye_removal', 'rename_series', 'resize_images', 'search', 'selections', 'slideshow', 'terminal', 'webalbums']
+
+[org/gnome/gthumb/pixbuf-savers/jpeg]
+default-ext='jpg'
+optimize=true
+progressive=false
+quality=100
+smoothing=0
 
 [org/gnome/maps]
 last-viewed-location=[0.0, 0.0]
@@ -298,19 +362,19 @@ search-filter-time-type='last_modified'
 search-view='list-view'
 
 [org/gnome/nautilus/window-state]
-initial-size=(916, 1022)
+initial-size=(1904, 996)
 maximized=false
 sidebar-width=192
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
-night-light-schedule-from=14.0
-night-light-schedule-to=13.983333333333333
-night-light-temperature=uint32 3035
+night-light-schedule-from=7.0
+night-light-schedule-to=6.9833333333333325
+night-light-temperature=uint32 4319
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=@as []
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 logout=@as []
 magnifier=@as []
 magnifier-zoom-in=@as []
@@ -321,11 +385,17 @@ screenreader=@as []
 screensaver=['<Primary><Alt>Delete']
 screenshot-clip=@as []
 window-screenshot-clip=@as []
+www=['<Super>b']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>t'
 command='kitty'
 name='Launch terminal (kitty)'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>p'
+command='pamac-manager'
+name='Launch pamac'
 
 [org/gnome/settings-daemon/plugins/xsettings]
 hinting='medium'
@@ -457,5 +527,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(0, 141)
-window-size=(1328, 902)
+window-position=(1928, 34)
+window-size=(1904, 996)
