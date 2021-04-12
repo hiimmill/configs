@@ -1,3 +1,15 @@
+[com/github/Ory0n/Resource_Monitor]
+autohide=false
+chosendisk='All'
+cputemperature=false
+decimals=true
+diskslist=['/dev/mapper/luks-d290b55f-7755-4830-ae3e-95fb5b6021eb false false', '/dev/sda1 true true']
+diskspace=false
+iconsposition=1
+interval=5
+showsystemmonitor=false
+swap=true
+
 [com/github/maoschanz/DynamicWallpaperEditor]
 display-mode='list'
 
@@ -141,6 +153,9 @@ application-id='com.skype.Client.desktop'
 [org/gnome/desktop/notifications/application/discord]
 application-id='discord.desktop'
 
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
@@ -150,11 +165,17 @@ application-id='gnome-printers-panel.desktop'
 [org/gnome/desktop/notifications/application/kitty]
 application-id='kitty.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-chromegnomeshell]
+application-id='org.gnome.ChromeGnomeShell.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-clocks]
 application-id='org.gnome.clocks.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-dejadup]
 application-id='org.gnome.DejaDup.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-extensions-desktop]
+application-id='org.gnome.Extensions.desktop.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
@@ -222,7 +243,9 @@ show-desktop=@as []
 switch-input-source=['<Primary>Tab']
 switch-input-source-backward=['<Primary><Shift>Tab']
 switch-to-workspace-1=@as []
+switch-to-workspace-down=['<Primary><Alt>Page_Down']
 switch-to-workspace-last=@as []
+switch-to-workspace-up=['<Primary><Alt>Page_Up']
 toggle-fullscreen=['F11']
 toggle-maximized=['<Super>m']
 unmaximize=@as []
@@ -293,6 +316,7 @@ size=(948, 1116)
 state=87168
 
 [org/gnome/gnome-screenshot]
+delay=0
 include-pointer=false
 last-save-directory='file:///home/hiimmill/Pictures'
 
@@ -369,6 +393,14 @@ initial-size=(1888, 1006)
 maximized=false
 sidebar-width=192
 
+[org/gnome/nm-applet/eap/60ce5a02-dd21-4efb-9a57-f13e4595ef64]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/78a84023-5889-4263-91a2-7fdf789915cd]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
 night-light-schedule-from=7.0
@@ -405,6 +437,11 @@ binding='<Primary><Alt>End'
 command='systemctl suspend -i'
 name='Suspend (ignore caffeine)'
 
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Super>f'
+command='kitty ranger'
+name='Launch ranger'
+
 [org/gnome/settings-daemon/plugins/xsettings]
 hinting='medium'
 
@@ -412,7 +449,7 @@ hinting='medium'
 app-picker-layout=[{'system-tools': <{'position': <0>}>, 'accessories': <{'position': <1>}>, 'office': <{'position': <2>}>, 'webapp-manager.desktop': <{'position': <3>}>, 'firefox.desktop': <{'position': <4>}>, 'org.gnome.Geary.desktop': <{'position': <5>}>, 'simple-scan.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Cheese.desktop': <{'position': <8>}>, 'org.gnome.Lollypop.desktop': <{'position': <9>}>, 'org.gnome.gThumb.desktop': <{'position': <10>}>, 'gnome-layouts.desktop': <{'position': <11>}>, 'manjaro-documentation.desktop': <{'position': <12>}>, 'org.gnome.Nautilus.desktop': <{'position': <13>}>, 'org.gnome.Maps.desktop': <{'position': <14>}>, 'org.manjaro.pamac.manager.desktop': <{'position': <15>}>}]
 disable-user-extensions=false
 disabled-extensions=['native-window-placement@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com', 'pixel-saver@deadalnix.me', 'wandering-pixel@justinrdonnelly.github.com', 'no-title-bar@jonaspoehler.de']
-enabled-extensions=['pop-shell@system76.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'pamac-updates@manjaro.org', 'alarm-clock@bogado.qinn.es', 'focus-my-window@varianto25.com', 'dash-to-panel@jderose9.github.com', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu']
+enabled-extensions=['pop-shell@system76.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'pamac-updates@manjaro.org', 'alarm-clock@bogado.qinn.es', 'focus-my-window@varianto25.com', 'dash-to-panel@jderose9.github.com', 'no-title-bar@franglais125.gmail.com', 'unite@hardpixel.eu', 'Resource_Monitor@Ory0n', 'argos@pew.worldwidemann.com', 'Short_Memo@kusabashira']
 favorite-apps=['org.keepassxc.KeePassXC.desktop', 'brave-browser.desktop', 'code-oss.desktop', 'com.microsoft.Teams.desktop', 'com.spotify.Client.desktop', 'signal-desktop.desktop', 'virtualbox.desktop']
 had-bluetooth-devices-setup=true
 
@@ -427,10 +464,10 @@ animate-app-switch=false
 animate-window-launch=false
 appicon-margin=2
 appicon-padding=4
-available-monitors=[0, 1]
+available-monitors=[0]
 hotkeys-overlay-combo='TEMPORARILY'
 multi-monitors=false
-panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedTL"},{"element":"rightBox","visible":true,"position":"stackedTL"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
 panel-positions='{"0":"TOP","1":"TOP"}'
 panel-size=26
 show-favorites=false
@@ -486,6 +523,9 @@ pop-workspace-down=['<Shift><Super>Page_Down']
 pop-workspace-up=['<Shift><Super>Page_Up']
 show-title=true
 tile-by-default=true
+
+[org/gnome/shell/extensions/short-memo]
+message='❗plan tygodnia❗'
 
 [org/gnome/shell/extensions/unite]
 autofocus-windows=false
