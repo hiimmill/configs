@@ -372,6 +372,7 @@ zoom-level=2
 
 [org/gnome/mutter]
 edge-tiling=false
+overlay-key='Super_R'
 
 [org/gnome/mutter/keybindings]
 toggle-tiled-left=@as []
@@ -464,7 +465,7 @@ animate-app-switch=false
 animate-window-launch=false
 appicon-margin=2
 appicon-padding=4
-available-monitors=[0]
+available-monitors=[0, 1]
 hotkeys-overlay-combo='TEMPORARILY'
 multi-monitors=false
 panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedTL"},{"element":"rightBox","visible":true,"position":"stackedTL"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":false,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
@@ -575,7 +576,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(404, 26)
+window-position=(8, 94)
 window-size=(1904, 996)
 
 [org/workrave/sound/events]
